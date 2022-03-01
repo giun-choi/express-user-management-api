@@ -10,7 +10,6 @@ class UserStorage {
       conn = await pool.getConnection();
       const query =
         "SELECT USER_ID, USER_PSWORD FROM tb_user WHERE USER_ID = ?;";
-      const dateTime = date.getDatetime();
       rows = await conn.query(query, [id]);
     } catch (err) {
       console.error(err);
